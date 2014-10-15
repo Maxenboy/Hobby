@@ -1,0 +1,68 @@
+package GUI;
+
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.print.PrinterException;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTextPane;
+
+public class generateFrame extends JFrame {
+	private JButton print;
+	private JTextPane area;
+	private static final long serialVersionUID = -5230500736967473638L;
+
+	public generateFrame(String title, String text) {
+		super(title);
+		setLayout(new BorderLayout());
+		area = new JTextPane();
+		area.setEditable(false);
+		area.setFont(area.getFont().deriveFont(20f));
+		add(new JScrollPane(area), BorderLayout.CENTER);
+		area.setText(text);
+		area.setSelectionStart(0);
+		area.setSelectionEnd(0);
+		print = new JButton("Print");
+		add(print, BorderLayout.SOUTH);
+
+		print.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					area.print();
+				} catch (PrinterException e1) {
+					JOptionPane.showMessageDialog(area, e1);
+				}
+
+			}
+
+		});
+		print.addKeyListener(new KeyListener() {
+
+			@Override
+			public void keyPressed(KeyEvent e) {
+
+			}
+
+			@Override
+			public void keyReleased(KeyEvent e) {
+				int key = e.getKeyCode();
+				if (key == KeyEvent.VK_ENTER) {
+					print.actionPerformed(null);
+
+				}
+			}
+
+			@Override
+			public void keyTyped(KeyEvent e) {
+			}
+		});
+
+	}
+
+}

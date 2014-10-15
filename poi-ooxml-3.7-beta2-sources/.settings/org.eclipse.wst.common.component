@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="poi-ooxml-3.7-beta2-sources">
+        <wb-resource deploy-path="/" source-path="/appClientModule" tag="defaultRootSource"/>
+        <property name="java-output-path" value="/poi-ooxml-3.7-beta2-sources/build/classes"/>
+    </wb-module>
+</project-modules>

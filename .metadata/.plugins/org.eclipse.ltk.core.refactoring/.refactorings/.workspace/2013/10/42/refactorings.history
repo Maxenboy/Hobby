@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete 2 resources" deleteContents="false" description="Delete 2 resources" element1="/poi-ooxml-3.7-beta2-sources" element2="/poi-ooxml-3.8-20120326" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="2" stamp="1382024182376"/>&#x0A;<refactoring comment="Delete 3 resources" deleteContents="true" description="Delete 3 resources" element1="/dom4j-1.6.1" element2="/stax-api-1.0.1" element3="/WKIT" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="3" stamp="1382024202982"/>
+</session>

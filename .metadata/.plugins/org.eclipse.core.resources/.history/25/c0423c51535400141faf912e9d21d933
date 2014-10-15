@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class multiplikationstabell {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Vilken mulitiplikationstabell önskas? ");
+		int multiplikator = Integer.parseInt(scan.nextLine());
+		System.out.println("Hur långt ska jag räkna? ");
+		int multiplikand = Integer.parseInt(scan.nextLine());
+		for (int i = 1; i < multiplikand; i++) {
+			System.out.println(multiplikator + " * " + i + " = "
+					+ multiplikator * multiplikand);
+		}
+	}
+}

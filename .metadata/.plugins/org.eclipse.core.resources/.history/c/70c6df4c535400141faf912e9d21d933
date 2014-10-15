@@ -1,0 +1,72 @@
+import java.util.Scanner;
+
+public class program {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Var god att mata in 3 olika siffror");
+		int var1 = Integer.parseInt(scan.nextLine());
+		int var2 = Integer.parseInt(scan.nextLine());
+		int var3 = Integer.parseInt(scan.nextLine());
+		boolean svar = false;
+		if (var1 % 7 == 0) {
+			svar = true;
+			System.out.println("svar: " + svar
+					+ "\n Tal nummer 1 var jämnt delbart med 7");
+		} else {
+			svar = false;
+			System.out.println("svar: " + svar
+					+ "\n Tal nummer 1 var inte jämnt delbart med 7");
+		}
+		if (var3 % var2 != 0) {
+			svar = true;
+			System.out
+					.println("svar: "
+							+ svar
+							+ "\n Tal nummer 3 var inte jämnt delbart med tal nummer 2");
+		} else {
+			svar = false;
+			System.out.println("svar: " + svar
+					+ "\n Tal nummer 3 var jämnt delbart med tal nummer 2");
+		}
+		if (var1 > var2 || var1 > var3) {
+			svar = true;
+			System.out
+					.println("svar: "
+							+ svar
+							+ "\n Tal nummer 1 var större än tal nummer 2 eller tal nummer 3");
+		} else {
+			svar = false;
+			System.out
+					.println("svar: "
+							+ svar
+							+ "\n Tal nummer 1 var inte större än tal nummer 2 eller tal nummer 3");
+		}
+		if (var1 > var2 && var2 > var3) {
+			svar = true;
+			System.out
+					.println("svar: "
+							+ svar
+							+ "\n Tal nummer 1 var större än tal nummer 2 och tal nummer 2 större än tal nummer 3");
+		} else {
+			svar = false;
+			System.out
+					.println("svar: "
+							+ svar
+							+ "\n Tal nummer 1 var inte större än tal nummer 2 och/eller tal nummer 2 större än tal nummer 3");
+		}
+		if ((var1 > var2 || var1 > var3) && (var1 < var2 || var1 < var3)) {
+			svar = true;
+			System.out
+					.println("svar: "
+							+ svar
+							+ "\n Tal nummer 1 var större än tal nummer 2 eller tal nummer 3 men inte större än båda");
+		}else{
+			svar = false;
+			System.out
+					.println("svar: "
+							+ svar
+							+ "\n Tal nummer 1 var inte större än tal nummer 2 eller tal nummer 3 och/eller större än båda");
+		}
+	}
+}
